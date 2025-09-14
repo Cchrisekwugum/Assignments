@@ -3,7 +3,7 @@
  - To solve the problem as stated in the assigment question.
  - I  use 4 approaches of versioning
   - [version1](https://github.com/Cchrisekwugum/Assignments/blob/main/version1.py) : A simple authentication code using a simple dictionary of list to store users data
-  - version2 : This uses json file to store all users data with all password in plane text
+  - [version2](https://github.com/Cchrisekwugum/Assignments/blob/main/version2.py) : This uses json file to store all users data with all password in plane text
   - version3 : This also uses json file with a users password encrypted
   - version4 : This used fast api to create endpoints and swagger UI to display and test it
 
@@ -65,3 +65,8 @@ This was my first understanding of the question. I first scoped the problem tryi
 - Create a function to update_password
   - Validates the old password
   - Updates the password if valid
+
+#### **[VERSION2](https://github.com/Cchrisekwugum/Assignments/blob/main/version2.py)**
+
+- This version contains almost the same code as [version1](https://github.com/Cchrisekwugum/Assignments/blob/main/version1.py)
+, the **only difference** is that the user data is stored or **written to a json file**. Such that every other operation like login, list users, delete user and update password will have to load the json file to be able to have access to the data before any operation can be performed.
