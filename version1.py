@@ -133,3 +133,58 @@ print(register(email, name, password))
 user_id = 2
 print("Remove user result:", remove_user(user_id))
 
+
+#STEP 4 - Bonus Challenge 1
+# Create a function to list users
+ # - return all users'id, email and name but not passwords
+ 
+ 
+def list_users() -> dict:
+     
+    users_list = []
+    for user_id, user_data in users.items():
+         users_list.append(
+             {
+                 "id": user_id,
+                 "email": user_data["email"],
+                 "name": user_data["name"]
+             }
+         )
+    return users_list
+
+# Test list users code
+print("List of users:", list_users())
+
+
+
+#STEP 4 - Bonus Challenge 2
+# Create a function to update_password
+ # - Validates the old password
+ # - Updates the password if valid
+
+def update_password(user_id: int, old_password: str, new_password: str) -> dict: 
+    """
+    Arguments:
+        user_id: int
+        old_password: str
+        new_password: str
+    """
+    if user_id not in users:
+        return {"Status": "error", "Message": "User not found"}
+    
+    user = users[user_id]
+ 
+    if user["password"] != old_password:
+        return {"Status": "error", "Message": "Invalid old password"}
+    
+    if not validate_password(new_password):
+        return {"Status": "error", "Message": "New password must be at least 8 characters and contain a digit"}
+ 
+    user["password"] = new_password
+    return {"Status": "success", "Message": "Password updated successfully"}
+
+#Test update password code
+user_id = 1
+old_password = "xhristopher123"
+new_password = "chris1234"
+print("Update password result:", update_password(user_id, old_password, new_password))
