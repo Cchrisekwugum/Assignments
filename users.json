@@ -1,1 +1,16 @@
-{}
+{
+    "2": {
+        "id": 2,
+        "name": "onyekachi",
+        "email": "onyekachi@gmail.com",
+        "password": "$2b$12$fWTvQmyZu13kjbygmB97yONUxNLjEkQV8RF.yOBiXFgLf2NRF2Gme",
+        "is_admin": false
+    },
+    "3": {
+        "id": 3,
+        "name": "ekwugum",
+        "email": "ekwugum@gmail.com",
+        "password": "$2b$12$Lh2GwIGIxqwRqP7eKRKsvealSQ.51DnxAwf0W42sG.Z9Y1/HqdXOm",
+        "is_admin": false
+    }
+}

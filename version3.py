@@ -3,7 +3,7 @@ import json
 import os
 import bcrypt 
 
-USER_data = "users.json"
+USER_data = r"./Assignments/users.json"
 
 # Load existing users
 if os.path.exists(USER_data):
@@ -168,6 +168,7 @@ def remove_user(user_id: int) -> dict:
     save_users(users)
 
     return {"Status": "success", "Message": "User removed successfully"}
+
 # testing remove user
 user_id = 1
 print("Remove user result:", remove_user(user_id))
