@@ -2,6 +2,7 @@
  
 **SOLUTION**
  - Please note that [version1.py](https://github.com/Cchrisekwugum/Assignments/blob/main/version1.py) contains the actual solution to the question below while other files are experimentations using the same question.
+ Kindly refer to the [documentation.md](https://github.com/Cchrisekwugum/Assignments/blob/main/documentation.md) file to better understand my process.
 
 ## **QUESTION**
 
