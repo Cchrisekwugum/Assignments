@@ -2,12 +2,12 @@
 ### **STEPS TO SOLVING THE PROBLEM**
  - To solve the problem as stated in the assigment question.
  - I  use 4 approaches of versioning
-  - version1 : A simple authentication code using a simple dictionary of list to store users data
+  - [version1](https://github.com/Cchrisekwugum/Assignments/blob/main/version1.py) : A simple authentication code using a simple dictionary of list to store users data
   - version2 : This uses json file to store all users data with all password in plane text
   - version3 : This also uses json file with a users password encrypted
   - version4 : This used fast api to create endpoints and swagger UI to display and test it
 
-#### **VERSION1**
+#### **[VERSION1](https://github.com/Cchrisekwugum/Assignments/blob/main/version1.py)**
 This was my first understanding of the question. I first scoped the problem trying to understand how to get started, then broke it down into the following steps as listed below. Then wrote the code for each step in sequential order.
 
 **Step 1 A**
