@@ -84,9 +84,9 @@ def register(email:str, name:str, password:str) ->dict:
     return {"Status": "success", "Message": "User registered successfully", "user_id": new_id}
 
 # Test register function
-email = "chris@gmail.com"
-name = "christopher"
-password = "christoper123"
+email = "xhris@gmail.com"
+name = "xhristopher"
+password = "xhristoper123"
 print(register(email, name, password))
 
 
@@ -113,3 +113,23 @@ def login(email:str, password:str) -> dict:
 email = "chris@gmail.com"
 password = "christoper123"
 print(login(email, password))
+
+# STEP3
+# Create a function to remove a user by ID
+# - check if user exists
+
+def remove_user(user_id: int) -> dict:
+    """
+    Arguments:
+          user_id: the unique ID of the user to be removed
+    """
+    if user_id not in users:
+        return {"Status":"error","Message": "User not found"}
+    del users[user_id]
+    return {"Status":"success","Message": "User removed successfully"}
+
+# Test remove user code
+print(register(email, name, password))
+user_id = 2
+print("Remove user result:", remove_user(user_id))
+
