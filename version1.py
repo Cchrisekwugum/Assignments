@@ -23,28 +23,27 @@ def validate_password(password):
     if not any(char.isdigit() for char in password):
         print("Password must contain at least one digit")
         return False
-    
     return True
 
 def validate_email(email):
     if "@" not in email:
         print("Invalid email")
         return False
-    else:   
-        return True
+    return True
     
     
 def is_email_unique(email):
     for user in users.values():
         if user["email"] ==email:
             return True
-        else:
-            return False
+        return False
     
    
 # Test validation functions
 password = "christoper123"
 email = "chris@gmail.com"
-print("Password validation:", validate_password(password))     
+print("Password validation:", validate_password(password))   
+print("Email validation:", validate_email(email))
+print("Email validation:", is_email_unique(email))  
                 
     
