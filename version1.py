@@ -40,10 +40,51 @@ def is_email_unique(email):
     
    
 # Test validation functions
-password = "christoper123"
-email = "chris@gmail.com"
-print("Password validation:", validate_password(password))   
-print("Email validation:", validate_email(email))
-print("Email validation:", is_email_unique(email))  
+# password = "christoper123"
+# email = "chris@gmail.com"
+# print("Password validation:", validate_password(password))   
+# print("Email validation:", validate_email(email))
+# print("Email validation:", is_email_unique(email))  
                 
+
+# STEP 1 B
+# Create a function to register a new user
+# - check if email is valid
+# - check if password is strong
+# - check if there is no duplicate email
+# - if email is valid, creates a new user with unique ID that is, check if it already exist
+
+def register(email:str, name:str, password:str) ->dict:
     
+    """
+    Arguments:
+        email: user’s email address
+        name: user’s full name
+        password: chosen password
+
+    """
+    global users, new_id
+    
+    if not validate_email(email):
+        return {"status": "error", "Message": "Invalid email"}
+    if not validate_password(password):
+        return {"status": "error", "Message": "Password must be min of 8 chars and min of 1 digit"}
+    if is_email_unique(email):
+        return {"status": "error", "Message": "Email already taken"}
+    
+    user = {
+        "id": new_id,
+        "email": email,
+        "name": name,
+        "password": password,
+        "is_admin": False
+    }
+    users[new_id] = user
+    new_id = new_id + 1
+    return {"status": "success", "Message": "User registered successfully", "user_id": new_id}
+
+# Test register function
+email = "chris@gmail.com"
+name = "christopher"
+password = "christoper123"
+print(register(email, name, password))
