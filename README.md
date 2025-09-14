@@ -1,5 +1,8 @@
 # **Assignments**
  
+**SOLUTION**
+ - Please note that [version1.py]() contains the actual solution to the question below while other files are experimentations using the same quation.
+
 **Advantra User Authentication**
 
  - Advantra Technology is an Edtech startup building a simple user authentication system for its web application. The system needs to allow new users to register, existing users to log in, and administrators to remove users when necessary. For now, the system will be managed entirely in memory using Python dictionaries, without a database.
