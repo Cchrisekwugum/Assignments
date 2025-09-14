@@ -1,7 +1,7 @@
 # **Assignments**
  
 **SOLUTION**
- - Please note that [version1.py](https://github.com/Cchrisekwugum/Assignments/blob/main/version1.py) contains the actual solution to the question below while other files are experimentations using the same quation.
+ - Please note that [version1.py](https://github.com/Cchrisekwugum/Assignments/blob/main/version1.py) contains the actual solution to the question below while other files are experimentations using the same question.
 
 ## **QUESTION**
 
