@@ -4,7 +4,7 @@
  - I  use 4 approaches of versioning
   - [version1](https://github.com/Cchrisekwugum/Assignments/blob/main/version1.py) : A simple authentication code using a simple dictionary of list to store users data
   - [version2](https://github.com/Cchrisekwugum/Assignments/blob/main/version2.py) : This uses json file to store all users data with all password in plane text
-  - version3 : This also uses json file with a users password encrypted
+  - [version3](https://github.com/Cchrisekwugum/Assignments/blob/main/version3.py) : This also uses json file with a users password encrypted
   - version4 : This used fast api to create endpoints and swagger UI to display and test it
 
 #### **[VERSION1](https://github.com/Cchrisekwugum/Assignments/blob/main/version1.py)**
@@ -70,3 +70,8 @@ This was my first understanding of the question. I first scoped the problem tryi
 
 - This version contains almost the same code as [version1](https://github.com/Cchrisekwugum/Assignments/blob/main/version1.py)
 , the **only difference** is that the user data is stored or **written to a json file**. Such that every other operation like login, list users, delete user and update password will have to load the json file to be able to have access to the data before any operation can be performed.
+
+#### **[VERSION3](https://github.com/Cchrisekwugum/Assignments/blob/main/version3.py)**
+
+- This version contains same file as [version2](https://github.com/Cchrisekwugum/Assignments/blob/main/version2.py) the only difference is that the password collected here was **hashed**
+- I also created a main.py file, config.json and config.py file to manage importing of files and to easy operationability without tampering with the actual code. SO I wrote the config files so that all changes and alteration can be done from there.  
