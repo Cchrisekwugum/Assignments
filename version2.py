@@ -22,7 +22,7 @@ import json
 import os
 
 
-USER_data = "users.json"
+USER_data = r"Assignments/users.json"
 
 if os.path.exists(USER_data):
     with open(USER_data, "r") as f:
@@ -66,11 +66,11 @@ def register(email: str, name: str, password: str) -> dict:
     save_users(users)
     return {"Status": "success", "Message": "User registered successfully", "User_id": user_id}
 
-# testing register
-# email = "chris@gmail.com"
-# name = "chris"
-# password = "chris123"
-# print("Register result:", register(email, name, password))
+#testing register
+email = "chris@gmail.com"
+name = "chris"
+password = "chris123"
+print("Register result:", register(email, name, password))
 
 # STEP2: Login a user
 
@@ -98,9 +98,9 @@ def login(email: str, password: str) -> dict:
     return {"Status": "error", "Message": "Email not found"}
 
 # testing login
-# email = "chris@gmail.com"
-# password = "chris123"
-# print("Login result:", login(email, password))
+email = "chris@gmail.com"
+password = "chris123"
+print("Login result:", login(email, password))
 
 #STEP3: List all users
 def list_users() -> dict:
@@ -124,7 +124,7 @@ def list_users() -> dict:
 
 
 # testing list users
-# print("List of users:", list_users())
+print("List of users:", list_users())
 
 
 # STEP 5: Update user password
@@ -162,10 +162,10 @@ def update_password(user_id: int, old_password: str, new_password: str) -> dict:
     return {"Status": "success", "Message": "Password updated successfully"}
 
 # testing update password
-# user_id = 1
-# old_password = "chris123"
-# new_password = "chris1234"
-# print("Update password result:", update_password(user_id, old_password, new_password))
+user_id = 1
+old_password = "chris123"
+new_password = "chris1234"
+print("Update password result:", update_password(user_id, old_password, new_password))
 
 
 # STEP4: Remove a user from file by ID
@@ -185,7 +185,7 @@ def remove_user(user_id: int) -> dict:
     return {"Status": "success", "Message": "User removed successfully"}
 
 # testing remove user
-# user_id = 1
-# print("Remove user result:", remove_user(user_id))
+user_id = 1
+print("Remove user result:", remove_user(user_id))
 
 
