@@ -81,10 +81,35 @@ def register(email:str, name:str, password:str) ->dict:
     }
     users[new_id] = user
     new_id = new_id + 1
-    return {"status": "success", "Message": "User registered successfully", "user_id": new_id}
+    return {"Status": "success", "Message": "User registered successfully", "user_id": new_id}
 
 # Test register function
 email = "chris@gmail.com"
 name = "christopher"
 password = "christoper123"
 print(register(email, name, password))
+
+
+# STEP 2
+# Create a function for user login
+ # - check if user exists
+ # - check if password matches
+
+def login(email:str, password:str) -> dict:
+    """
+    Arguments:
+        email: user’s email
+        password: user’s password
+    """
+    for user_id, user_data in users.items():
+        if user_data["email"] == email:
+            if user_data["password"] == password:
+                return {"Status": "success", "Message": "Login successful", "user_id": user_id}
+            else:
+                return {"Status": "error", "Message": "Invalid email or password"}
+    return {"Status": "error", "Message": "Invalid email or password"}
+
+# Test login function
+email = "chris@gmail.com"
+password = "christoper123"
+print(login(email, password))
