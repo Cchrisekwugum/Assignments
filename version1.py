@@ -15,11 +15,36 @@ new_id = 1
 
 # Defining validation functions
 
-def validate_password(password):
-    if len(password)>8:
+def validate_password(password):     
+    if len(password) < 8:
         print("Password must be at least 8 least 8 characters")
         return False
+    
     if not any(char.isdigit() for char in password):
         print("Password must contain at least one digit")
         return False
+    
     return True
+
+def validate_email(email):
+    if "@" not in email:
+        print("Invalid email")
+        return False
+    else:   
+        return True
+    
+    
+def is_email_unique(email):
+    for user in users.values():
+        if user["email"] ==email:
+            return True
+        else:
+            return False
+    
+   
+# Test validation functions
+password = "christoper123"
+email = "chris@gmail.com"
+print("Password validation:", validate_password(password))     
+                
+    
