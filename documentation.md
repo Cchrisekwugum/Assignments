@@ -61,7 +61,7 @@ This was my first understanding of the question. I first scoped the problem tryi
 - Validates the old password
 - Updates the password if valid
 
-  **What I did**
+**What I did**
 - Create a function to update_password
   - Validates the old password
   - Updates the password if valid
